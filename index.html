@@ -3,99 +3,156 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Grafieken 365 — DNE embeddable charts</title>
+<title>Sustainable Media 365 — embeddable grafieken</title>
 <style>
   :root{
-    --geel:#FFC72C;
-    --oranje:#F39200;
-    --tekst:#1e1e1d;
-    --grijs:#6b6b69;
-    --grid:#e7e7e4;
+    --petrol:#0d4b5c;
+    --petrol-dark:#093a47;
+    --geel:#ffc72c;
+    --oranje:#e94e18;
+    --blauw:#1d9dd9;
+    --groen:#69b42e;
+    --tekst:#1e2a2d;
+    --grijs:#6b7a7d;
+    --lichtgrijs:#e4e9ea;
+    --bg:#f4f6f6;
     --wit:#ffffff;
   }
   *{box-sizing:border-box;margin:0;padding:0;}
   body{
     font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Arial,sans-serif;
-    background:#faf9f7;
+    background:var(--bg);
     color:var(--tekst);
     -webkit-font-smoothing:antialiased;
     line-height:1.5;
   }
-  .wrap{
-    max-width:720px;
+  .topbar{
+    background:var(--wit);
+    border-bottom:1px solid var(--lichtgrijs);
+  }
+  .topbar .inner{
+    max-width:760px;
     margin:0 auto;
-    padding:48px 20px 64px;
+    padding:18px 20px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+  }
+  /* Logo nagebouwd in stijl van Sustainable Media 365 */
+  .logo{
+    font-size:18px;
+    font-weight:800;
+    letter-spacing:0.2px;
+    line-height:1.05;
+    color:var(--petrol);
+    text-transform:uppercase;
+  }
+  .logo .l2{display:block;}
+  .logo .c3{color:var(--geel);}
+  .logo .c6{color:var(--oranje);}
+  .logo .c5{color:var(--blauw);}
+  .logo .dot{color:var(--groen);}
+  .topbar .tag{
+    margin-left:auto;
+    font-size:11px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    color:var(--petrol);
+    background:#e0ebed;
+    padding:5px 11px;
+    border-radius:4px;
+  }
+  .wrap{
+    max-width:760px;
+    margin:0 auto;
+    padding:40px 20px 64px;
   }
   h1{
-    font-size:26px;
+    font-size:25px;
     font-weight:800;
-    margin-bottom:6px;
+    color:var(--petrol);
+    margin-bottom:8px;
   }
-  h1 .accent{color:var(--oranje);}
   .lead{
     color:var(--grijs);
     font-size:15px;
     margin-bottom:32px;
+    max-width:560px;
   }
   .card{
     background:var(--wit);
-    border:1px solid var(--grid);
-    border-left:4px solid var(--oranje);
-    padding:18px 20px;
+    border:1px solid var(--lichtgrijs);
+    border-radius:8px;
     margin-bottom:16px;
+    overflow:hidden;
   }
-  .card h2{
-    font-size:17px;
-    font-weight:700;
-    margin-bottom:4px;
+  /* Subtiele gekleurde accentstreep uit het 365-logo */
+  .card .stripe{
+    height:4px;
+    display:flex;
   }
-  .card p{
-    font-size:13.5px;
-    color:var(--grijs);
-    margin-bottom:12px;
-  }
+  .card .stripe span{flex:1;}
+  .card .stripe .s1{background:var(--geel);}
+  .card .stripe .s2{background:var(--oranje);}
+  .card .stripe .s3{background:var(--blauw);}
+  .card .stripe .s4{background:var(--groen);}
+  .card .body{padding:18px 22px 20px;}
+  .card h2{font-size:17px;font-weight:700;color:var(--petrol);margin-bottom:4px;}
+  .card p{font-size:13.5px;color:var(--grijs);margin-bottom:14px;}
   .card a{
     display:inline-block;
     font-size:13.5px;
-    font-weight:600;
-    color:var(--tekst);
+    font-weight:700;
+    color:var(--wit);
     text-decoration:none;
-    border:1px solid #d8d8d4;
-    border-radius:2px;
-    padding:7px 14px;
-    margin:0 8px 8px 0;
-    transition:background .15s,border-color .15s;
+    background:var(--petrol);
+    border:1px solid var(--petrol);
+    border-radius:6px;
+    padding:9px 18px;
+    transition:background .15s;
   }
   .card a:hover{
-    background:var(--geel);
-    border-color:var(--geel);
-  }
-  .card a.code{
-    color:var(--grijs);
-    font-weight:500;
+    background:var(--petrol-dark);
+    border-color:var(--petrol-dark);
   }
   .footer{
     margin-top:36px;
     font-size:12px;
     color:var(--grijs);
+    border-top:1px solid var(--lichtgrijs);
+    padding-top:18px;
   }
 </style>
 </head>
 <body>
+<div class="topbar">
+  <div class="inner">
+    <span class="logo">SUSTAINABLE<span class="l2">MEDIA<span class="c3">3</span><span class="c6">6</span><span class="c5">5</span><span class="dot">.</span></span></span>
+    <span class="tag">Grafieken</span>
+  </div>
+</div>
+
 <div class="wrap">
-  <h1>Grafieken<span class="accent">365</span></h1>
+  <h1>Grafieken</h1>
   <p class="lead">Embeddable datavisualisaties in Dutch New Energy (DNE) huisstijl. Elke grafiek is in te sluiten via een iframe.</p>
 
   <div class="card">
-    <h2>Aantal zonneparken naar grootte park</h2>
-    <p>Aantal zonneparken in Nederland naar oppervlakteklasse, 2020 vs 2025. Bron: Kadaster.</p>
-    <a href="zonneparken-grootte-dne.html">Open grafiek &rarr;</a>
+    <div class="stripe"><span class="s1"></span><span class="s2"></span><span class="s3"></span><span class="s4"></span></div>
+    <div class="body">
+      <h2>Aantal zonneparken naar grootte park</h2>
+      <p>Aantal zonneparken in Nederland naar oppervlakteklasse, 2020 vs 2025. Bron: Kadaster.</p>
+      <a href="zonneparken-grootte-dne.html">Open grafiek &rarr;</a>
+    </div>
   </div>
 
   <div class="card">
-    <h2>Oppervlakte zonneparken per provincie</h2>
-    <p>Oppervlakte zonneparken per provincie in hectare, 2020 vs 2025. Bron: Kadaster.</p>
-    <a href="zonneparken-provincie-dne.html">Open grafiek &rarr;</a>
+    <div class="stripe"><span class="s1"></span><span class="s2"></span><span class="s3"></span><span class="s4"></span></div>
+    <div class="body">
+      <h2>Oppervlakte zonneparken per provincie</h2>
+      <p>Oppervlakte zonneparken per provincie in hectare, 2020 vs 2025. Bron: Kadaster.</p>
+      <a href="zonneparken-provincie-dne.html">Open grafiek &rarr;</a>
+    </div>
   </div>
 
   <div class="footer">
