@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grafieken 365 — DNE embeddable charts</title>
+<style>
+  :root{
+    --geel:#FFC72C;
+    --oranje:#F39200;
+    --tekst:#1e1e1d;
+    --grijs:#6b6b69;
+    --grid:#e7e7e4;
+    --wit:#ffffff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Arial,sans-serif;
+    background:#faf9f7;
+    color:var(--tekst);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.5;
+  }
+  .wrap{
+    max-width:720px;
+    margin:0 auto;
+    padding:48px 20px 64px;
+  }
+  h1{
+    font-size:26px;
+    font-weight:800;
+    margin-bottom:6px;
+  }
+  h1 .accent{color:var(--oranje);}
+  .lead{
+    color:var(--grijs);
+    font-size:15px;
+    margin-bottom:32px;
+  }
+  .card{
+    background:var(--wit);
+    border:1px solid var(--grid);
+    border-left:4px solid var(--oranje);
+    padding:18px 20px;
+    margin-bottom:16px;
+  }
+  .card h2{
+    font-size:17px;
+    font-weight:700;
+    margin-bottom:4px;
+  }
+  .card p{
+    font-size:13.5px;
+    color:var(--grijs);
+    margin-bottom:12px;
+  }
+  .card a{
+    display:inline-block;
+    font-size:13.5px;
+    font-weight:600;
+    color:var(--tekst);
+    text-decoration:none;
+    border:1px solid #d8d8d4;
+    border-radius:2px;
+    padding:7px 14px;
+    margin:0 8px 8px 0;
+    transition:background .15s,border-color .15s;
+  }
+  .card a:hover{
+    background:var(--geel);
+    border-color:var(--geel);
+  }
+  .card a.code{
+    color:var(--grijs);
+    font-weight:500;
+  }
+  .footer{
+    margin-top:36px;
+    font-size:12px;
+    color:var(--grijs);
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Grafieken<span class="accent">365</span></h1>
+  <p class="lead">Embeddable datavisualisaties in Dutch New Energy (DNE) huisstijl. Elke grafiek is in te sluiten via een iframe.</p>
+
+  <div class="card">
+    <h2>Aantal zonneparken naar grootte park</h2>
+    <p>Aantal zonneparken in Nederland naar oppervlakteklasse, 2020 vs 2025. Bron: Kadaster.</p>
+    <a href="zonneparken-grootte-dne.html">Open grafiek &rarr;</a>
+  </div>
+
+  <div class="card">
+    <h2>Oppervlakte zonneparken per provincie</h2>
+    <p>Oppervlakte zonneparken per provincie in hectare, 2020 vs 2025. Bron: Kadaster.</p>
+    <a href="zonneparken-provincie-dne.html">Open grafiek &rarr;</a>
+  </div>
+
+  <div class="footer">
+    Sustainable Media 365 &middot; Dutch New Energy Research
+  </div>
+</div>
+</body>
+</html>
